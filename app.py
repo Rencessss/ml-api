@@ -13,9 +13,8 @@ lr_model = joblib.load("lr_model.pkl")
 def predict():
     try:
         # GET parameters (adjust based on your system inputs)
-        year = float(request.args.get("year", 0))
-        employed = float(request.args.get("employed", 0))
-        unemployed = float(request.args.get("unemployed", 0))
+     year = float(request.args.get("year", 0))
+data = np.array([[year]])
 
         data = np.array([[year, employed, unemployed]])
 
